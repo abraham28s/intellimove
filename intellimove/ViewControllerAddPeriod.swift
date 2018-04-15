@@ -22,6 +22,22 @@ class ViewControllerAddPeriod: UIViewController, UIPickerViewDelegate, UIPickerV
         return attributedString
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView === selectHoraInicio {
+            inicioField.text = pickerData[0][pickerView.selectedRow(inComponent: 0)] + ":" + pickerData[1][pickerView.selectedRow(inComponent: 1)]
+        }else if pickerView === selectHoraTermino{
+            finField.text = pickerData[pickerView.selectedRow(inComponent: 0)][row] + ":" + pickerData[pickerView.selectedRow(inComponent: 1)][row]
+        }
+    }
+    @IBAction func pressBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func pressSave(_ sender: Any) {
+        let papa = self.presentingViewController as! ViewControllerAddLocations
+        papa.data.append([dayField.text!,inicioField.text!,finField.text!])
+        papa.tabla.reloadData()
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBOutlet weak var selectDay: UIDatePicker!
     @IBOutlet weak var selectHoraInicio: UIPickerView!
@@ -54,6 +70,8 @@ class ViewControllerAddPeriod: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        inicioField.text = pickerData[0][0] + ":" + pickerData[1][0]
+        finField.text = pickerData[0][0] + ":" + pickerData[1][0]
         dateFormatter.timeStyle = DateFormatter.Style.none
         selectDay.setValue(UIColor.white, forKeyPath: "textColor")
         selectHoraInicio.setValue(UIColor.white, forKeyPath: "textColor")
@@ -61,6 +79,7 @@ class ViewControllerAddPeriod: UIViewController, UIPickerViewDelegate, UIPickerV
         dateFormatter.dateStyle = DateFormatter.Style.medium
         campos = [dayField,inicioField,finField]
         dayField.attributedPlaceholder = NSAttributedString(string: dateFormatter.string(from: selectDay.date), attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+        dayField.text =  dateFormatter.string(from: selectDay.date)
         for cam in campos {
             cam?.layer.borderColor = UIColor.white.cgColor
             cam?.layer.borderWidth = 1.0;

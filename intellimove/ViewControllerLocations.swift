@@ -8,13 +8,31 @@
 
 import UIKit
 
-class ViewControllerLocations: UIViewController {
+class ViewControllerLocations: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath)
+        cell.textLabel?.text = data[indexPath.row][0]
+        cell.detailTextLabel?.text = data[indexPath.row][1]
+        return cell
+    }
+    
+    
+    @IBOutlet weak var tabla: UITableView!
     let globals = Globals()
+    var data : [[String]] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tabla.delegate = self
+        tabla.dataSource = self
         // Do any additional setup after loading the view.
     }
 

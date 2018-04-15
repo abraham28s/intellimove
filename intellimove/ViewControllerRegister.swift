@@ -101,6 +101,15 @@ class ViewControllerRegister: UIViewController, UITableViewDelegate, UITableView
         return 1
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        if cell?.accessoryType == UITableViewCellAccessoryType.none {
+            cell?.accessoryType = .checkmark
+        } else{
+            cell?.accessoryType = .none
+        }
+    }
+    
     @IBAction func pressInfo(_ sender: Any) {
         self.present(globals.simpleAlert(titulo: "Info", texto: "El presupuesto se refiere al dinero que quieres usar semanalmente en transporte, este sirve para delimitar las opciones que entren en tu presupuesto."), animated: true, completion: nil)
     }
