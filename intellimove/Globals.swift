@@ -33,4 +33,10 @@ struct Globals{
             alpha: CGFloat(1.0)
         )
     }
+    
+    func simpleAlert(titulo:String, texto: String)-> UIAlertController{
+        let a = UIAlertController(title: titulo, message: texto, preferredStyle: .alert)
+        a.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        return a
+    }
 }

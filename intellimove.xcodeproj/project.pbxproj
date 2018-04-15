@@ -20,6 +20,8 @@
 		D35003C020830E6E0013584A /* ViewControllerLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35003BF20830E6E0013584A /* ViewControllerLocations.swift */; };
 		D35003C220831D8B0013584A /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35003C120831D8B0013584A /* Objects.swift */; };
 		D3ABE26020837A34004D7A28 /* ViewControllerAddLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ABE25F20837A34004D7A28 /* ViewControllerAddLocations.swift */; };
+		D3ABE26220838C34004D7A28 /* ViewControllerAddPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ABE26120838C34004D7A28 /* ViewControllerAddPeriod.swift */; };
+		D3ABE26420838C5E004D7A28 /* ViewControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ABE26320838C5E004D7A28 /* ViewControllerMain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		D35003BF20830E6E0013584A /* ViewControllerLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerLocations.swift; sourceTree = "<group>"; };
 		D35003C120831D8B0013584A /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
 		D3ABE25F20837A34004D7A28 /* ViewControllerAddLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddLocations.swift; sourceTree = "<group>"; };
+		D3ABE26120838C34004D7A28 /* ViewControllerAddPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAddPeriod.swift; sourceTree = "<group>"; };
+		D3ABE26320838C5E004D7A28 /* ViewControllerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +78,6 @@
 		D350039120829F970013584A = {
 			isa = PBXGroup;
 			children = (
-				D3ABE25F20837A34004D7A28 /* ViewControllerAddLocations.swift */,
 				D350039C20829F970013584A /* intellimove */,
 				D350039B20829F970013584A /* Products */,
 				176FEED3DBAEB075F16FC89D /* Pods */,
@@ -97,6 +100,7 @@
 				D35003A120829F970013584A /* Main.storyboard */,
 				D35003BD20830E600013584A /* ViewControllerRegister.swift */,
 				D35003BF20830E6E0013584A /* ViewControllerLocations.swift */,
+				D3ABE25F20837A34004D7A28 /* ViewControllerAddLocations.swift */,
 				D35003B32082FD5C0013584A /* TLFloatLabelTextView.swift */,
 				D35003B12082DC5B0013584A /* TLFloatLabelTextField.swift */,
 				D35003AF2082CC010013584A /* ViewControllerLogin.swift */,
@@ -105,6 +109,8 @@
 				D35003A920829F970013584A /* Info.plist */,
 				D35003B52082FEB40013584A /* Globals.swift */,
 				D35003C120831D8B0013584A /* Objects.swift */,
+				D3ABE26120838C34004D7A28 /* ViewControllerAddPeriod.swift */,
+				D3ABE26320838C5E004D7A28 /* ViewControllerMain.swift */,
 			);
 			path = intellimove;
 			sourceTree = "<group>";
@@ -246,10 +252,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35003B22082DC5B0013584A /* TLFloatLabelTextField.swift in Sources */,
+				D3ABE26420838C5E004D7A28 /* ViewControllerMain.swift in Sources */,
 				D35003B62082FEB40013584A /* Globals.swift in Sources */,
 				D35003C020830E6E0013584A /* ViewControllerLocations.swift in Sources */,
 				D350039E20829F970013584A /* AppDelegate.swift in Sources */,
 				D35003BE20830E600013584A /* ViewControllerRegister.swift in Sources */,
+				D3ABE26220838C34004D7A28 /* ViewControllerAddPeriod.swift in Sources */,
 				D35003B42082FD5C0013584A /* TLFloatLabelTextView.swift in Sources */,
 				D35003B02082CC010013584A /* ViewControllerLogin.swift in Sources */,
 				D3ABE26020837A34004D7A28 /* ViewControllerAddLocations.swift in Sources */,

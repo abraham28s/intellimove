@@ -101,6 +101,9 @@ class ViewControllerRegister: UIViewController, UITableViewDelegate, UITableView
         return 1
     }
     
+    @IBAction func pressInfo(_ sender: Any) {
+        self.present(globals.simpleAlert(titulo: "Info", texto: "El presupuesto se refiere al dinero que quieres usar semanalmente en transporte, este sirve para delimitar las opciones que entren en tu presupuesto."), animated: true, completion: nil)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transportes.count
     }
